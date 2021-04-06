@@ -1,0 +1,28 @@
+#include<iostream.h>
+using namespace std;
+ 
+void printAP(int first, int diff, int n)
+{
+int term;
+term=first;
+for (int i = 1; i <= n; i++)
+{   cout << term << " "<< ",";
+    term =term + diff;
+     
+}
+}
+ 
+int main()
+{  
+    int first, diff , n;
+    cout<< "enter first term of AP";
+    cin>> first;
+    cout<< "enter difference term of AP";
+    cin>> diff;
+    cout<< "enter no of term in AP";
+    cin>> n;
+ 
+    printAP(first, diff, n);
+ 
+    return 0;
+}

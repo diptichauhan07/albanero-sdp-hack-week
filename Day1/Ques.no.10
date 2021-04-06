@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int input, remainder, n, even = 0;
+    int evenArray[even];
+    count <<"enter size of an array";
+    cin >> n;
+    cout << "enter a value: ";
+    for (int i= 0; i<n; i++)
+    {
+       cin >> input;
+       while (input != 0)
+       {
+          remainder = input % 2;
+           if (remainder == 0) 
+             {
+               evenArray[even] = input;
+               even++;
+             }
+        }
+        
+    }
+    cout << "\nThe number of evens is " << even << ".\n";
+    cout << "The even values are: ";
+    for(int i = 0; i < even; i++)
+    {
+        cout << evenArray[i] << " ";
+    }
+   
+}

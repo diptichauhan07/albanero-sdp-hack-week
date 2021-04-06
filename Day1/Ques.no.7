@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+  
+int longestSubArr(int a[], int n, int k)
+{
+    int count = 0;
+    int l = 0;
+    int max_len = 0;
+    for (int i = 0; i < n; i++) {
+        if (a[i] == 0)
+            count++;
+        while (cnt > k) {
+            if (a[l] == 0)
+                count--;
+            l++;
+        }
+  
+        max_len = max(max_len, i - l + 1);
+    }
+  
+    return max_len;
+}
+  
+int main()
+{
+    int a[] , n ;
+    cout<< "Enter the size of array";
+    cin>> n;
+    for(int i=0; i<n; i++)
+    {
+        count<<"enter values in 0's & 1's";
+        cin>> a[i];
+    }
+    cout<< "enter the value of k";
+    cin>> k;
+    longestSubArr(a, n, k);
+    return 0;
+}

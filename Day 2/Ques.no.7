@@ -1,0 +1,28 @@
+#include<iostream.h>
+using namespace std
+void main
+{
+   int r, c, i, j, sum=0;
+   cout << "enter the no of rows";
+   cin >> r;
+   cout << "enter the no of columns";
+   cin >> c;
+   int M[r][c];
+   cout << "enter element in a matrix";
+   for(i=0; i<r; i++)
+     {
+         for(j=0; j<c; j++)
+          {
+             cin >> M[i][j];
+          }
+     }
+   for(i=0; i<r; i++)
+     {
+         for(j=0; j<c; j++)
+           {
+              if(M[i][j]%2==0)
+               sum+= M[i][j];
+           }
+     }
+   cout<< "sum = " << sum; 
+}

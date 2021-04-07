@@ -1,1 +1,37 @@
-
+#include <iostream.h>
+#include <string.h>
+using namespace std;
+int maxDepth(string S)
+{
+    int count = 0; 
+    int max = 0; 
+    int n = S.length();
+    for (int i = 0; i < n; i++)
+    {
+        if (S[i] == '(')
+        {
+            count++;
+            if (count > max)
+                max = count;
+        }
+        else if (S[i] == ')')
+        {
+            if (count > 0)
+                count--;
+            else
+                return -1;
+        }
+    }
+    if (count != 0)
+        return -1;
+ 
+    return max;
+}
+int main()
+{
+    string s;
+    cout<< "Enter your string";
+    cin >> s;
+    maxDepth(s);
+    return 0;
+}

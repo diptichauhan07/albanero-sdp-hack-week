@@ -1,0 +1,76 @@
+#include <iostream>
+using namespace std;
+struct Node {
+   int data;
+   struct Node *next;
+};
+struct Node *head = NULL, *newnode, *temp;
+int main() 
+ {
+    int choice=`1;
+    while(choice)
+    {
+      struct Node *newnode = (struct Node*) malloc(sizeof(struct Node));
+      cout<<"enter the data";
+      cin>> newnode -> data;
+      newnode->next = 0;
+      if(head==null)
+       {
+         head=temp=newnode;
+       }
+      else
+       {
+         temp -> next=newnode;
+         temp=newnode;
+       }
+      cout<<"do want to continue (0,1)?"
+      cin>>choice;
+    }
+   temp=head;
+   while(temp!=0)
+    {
+      cout<< temp -> data<<" ";
+      temp=temp ->next;  
+    }
+    // rearrange function 
+    Node *slow = *head, *fast = slow->next;
+    while (fast && fast->next) {
+        slow = slow->next;
+        fast = fast->next->next;
+    }
+    Node* head1 = *head;
+    Node* head2 = slow->next;
+    slow->next = NULL;
+   
+    // reverse 
+    Node *prev = NULL, *curr = *head, *next;
+ 
+    while (curr) {
+        next = curr->next;
+        curr->next = prev;
+        prev = curr;
+        curr = next;
+    }
+ 
+    *head = prev;
+ 
+    *head = newNode(0); 
+    
+    Node* curr = *head;
+    while (head1 || head2) {
+        if (head1) {
+            curr->next = head1;
+            curr = curr->next;
+            head1 = head1->next;
+        }
+ 
+        if (head2) {
+            curr->next = head2;
+            curr = curr->next;
+            head2 = head2->next;
+        }
+    }
+    *head = (*head)->next;
+}
+}
+  

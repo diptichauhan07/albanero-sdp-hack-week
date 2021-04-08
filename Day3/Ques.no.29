@@ -1,0 +1,18 @@
+#include<iostream.h>
+#include<math.h>
+using namespace std;
+void main()
+ {  
+   int num, rem=0;
+   string res="";
+   cout<<"enter the number:"
+   cin>>num;
+   while(num!=0)
+    {
+      rem=n%10
+      sq=Math.pow(rem,2);
+      res=sq;
+      cout<<"square:"<<sq<<endl;
+      n=n/10;
+    }
+ }

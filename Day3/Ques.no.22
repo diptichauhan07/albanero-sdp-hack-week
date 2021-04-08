@@ -1,1 +1,52 @@
-
+#include <iostream>
+using namespace std;
+struct Node {
+   int data;
+   struct Node *next;
+};
+struct Node *head = NULL, *newnode, *temp;
+void pairSwap(Node *head)
+{
+    struct Node *temp = head;
+    while (temp != NULL && temp->next != NULL) 
+     {
+        swap(temp->data, temp->next->data);
+        temp = temp->next->next;
+     }
+}
+int main() 
+ {
+    int choice= 1;
+    while(choice)
+    {
+      struct Node *newnode = (struct Node*) malloc(sizeof(struct Node));
+      cout<<"enter the data";
+      cin>> newnode -> data;
+      newnode->next = 0;
+      if(head==null)
+       {
+         head=temp=newnode;
+       }
+      else
+       {
+         temp -> next=newnode;
+         temp=newnode;
+       }
+      cout<<"do want to continue (0,1)?"
+      cin>>choice;
+    }
+   temp=head;
+   while(temp!=0)
+    {
+      cout<< temp -> data<<" ";
+      temp=temp ->next;
+    }
+   pairSwap(head);
+   temp=head;
+   while(temp!=0)
+    {
+      cout<< temp -> data<<" ";
+      temp=temp ->next;
+    }
+   return0;
+ }

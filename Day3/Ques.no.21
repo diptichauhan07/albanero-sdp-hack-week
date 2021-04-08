@@ -29,7 +29,7 @@ int main()
    temp=head;
    while(temp!=0)
     {
-      cout<< temp -> data;
+      cout<< temp -> data<<" ";
       temp=temp ->next;
     }
    struct Node *oddHead = head;
@@ -49,4 +49,10 @@ int main()
     }
        oddHead -> next = evenStart;
        return head; 
+       temp=head;
+   while(temp!=0)
+    {
+      cout<< temp -> data<<" ";
+      temp=temp ->next;
+    }
  }

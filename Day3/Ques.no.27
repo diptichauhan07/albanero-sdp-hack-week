@@ -1,0 +1,19 @@
+#include<iostream.h>
+using namespace std;
+void arrayOfMultiples(int num, int lenght)
+ {
+     int arr[lenght];
+     for(int i=0; i<lenght; i++)
+      {
+         cout<< arr[i]=num*i;
+      }
+ }
+void main()
+ {
+    int num, lenght;
+    cout<<"enter a number";
+    cin>> num;
+    cout<<"enter a lenght";
+    cin>> lenght;
+    arrayOfMultiples(num,lenght);
+ }

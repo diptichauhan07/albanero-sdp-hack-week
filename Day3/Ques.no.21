@@ -35,7 +35,7 @@ int main()
    struct Node *oddHead = head;
    struct Node *evenStart = head -> next;
    struct Node *evenHead = head -> next;
-        
+   if(head==NULL  || head -> next==NULL)
    while(evenHead != null)
     {
        oddHead -> next = evenHead -> next;

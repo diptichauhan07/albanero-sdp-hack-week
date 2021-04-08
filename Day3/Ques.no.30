@@ -1,0 +1,15 @@
+#include<iostream.h>
+using namespace std;
+void main()
+ {
+   int digit, sum=0, count=0;
+   cout<<"enter a digit";
+   cin>>digit;
+   while(digit!=0)
+    {
+      sum=sum+(digit%10);
+      digit=digit/10;
+      count++;
+    }
+   cout<<"mean= "<<(sum/count);
+ }

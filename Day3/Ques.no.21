@@ -1,0 +1,52 @@
+#include <iostream>
+using namespace std;
+struct Node {
+   int data;
+   struct Node *next;
+};
+struct Node *head = NULL, *newnode, *temp;
+int main() 
+ {
+    int choice=`1;
+    while(choice)
+    {
+      struct Node *newnode = (struct Node*) malloc(sizeof(struct Node));
+      cout<<"enter the data";
+      cin>> newnode -> data;
+      newnode->next = 0;
+      if(head==null)
+       {
+         head=temp=newnode;
+       }
+      else
+       {
+         temp -> next=newnode;
+         temp=newnode;
+       }
+      cout<<"do want to continue (0,1)?"
+      cin>>choice;
+    }
+   temp=head;
+   while(temp!=0)
+    {
+      cout<< temp -> data;
+      temp=temp ->next;
+    }
+   struct Node *oddHead = head;
+   struct Node *evenStart = head -> next;
+   struct Node *evenHead = head -> next;
+        
+   while(evenHead != null)
+    {
+       oddHead -> next = evenHead -> next;
+       if(oddHead -> next != null)
+        {
+            oddHead = oddHead -> next;
+        }
+            
+       evenHead -> next = oddHead -> next;
+       evenHead = evenHead -> next; 
+    }
+       oddHead -> next = evenStart;
+       return head; 
+ }

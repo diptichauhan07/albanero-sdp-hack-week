@@ -7,6 +7,25 @@ void main()
     {
        cout<<"true";
     }
-   else if(n>0)
+   if(n<0)
+    {
+      cout<<"false";
+    }
+   int r,sum=0,temp=n; 
+   while(n>0)    
+    {    
+       r=n%10;    
+       sum=(sum*10)+r;    
+       n=n/10;    
+    } 
+   if(temp==sum) 
+    { 
+       cout<<"true";  
+    }
+   else  
+    {   
+       cout<<"false"; 
+    }
+    
  }
  

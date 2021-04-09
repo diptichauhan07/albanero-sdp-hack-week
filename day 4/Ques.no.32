@@ -11,6 +11,23 @@ int main()
      {
          cin>> arr[i];
      }
+     for(int i=0; i<n; i++)
+      {
+        for(int j=i+1; j<n; j++)
+         {
+            if(arr[j] < arr[i])
+             {
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+             }
+         }
+      }
+      cout<<"sorted array:";
+      for(i=0; i<n; i++)
+      {
+         cout<<arr[i]<<endl;
+      }
     if (n==0 || n==1)
      {
         return n;
@@ -29,6 +46,7 @@ int main()
      {
         arr[i] = temp[i];
      }
+    cout<<"array after removing dublicate items:";
     for (int i=0; i<n; i++)
        cout << arr[i] << " ";
   

@@ -1,0 +1,21 @@
+#include<iostream.h>
+using namespace std;
+void main()
+ {
+  int num;
+  cout<<"enter a number:";
+  cin>>num;
+  string s= "";
+  int r=0;
+  for(int i=0; i<num; i++)
+   {
+      int n=i;
+      while(n>0)
+       {
+          r=n%2;
+          s=r+s;
+          n=n/2;
+       }
+      
+   }
+ }

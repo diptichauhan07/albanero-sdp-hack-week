@@ -1,0 +1,29 @@
+#include<iostream.h>
+using namespace std;
+void main()
+ {
+   int n1, n2;
+   cout<<"enter two numbers where n2>n1 and lenght will be same :"
+   cin>>n1>>n2;
+   int len = 0;
+   while (n1 != 0)
+    {
+        n = n / 10;
+        len++;
+    }
+   int t1[len], t2[len];
+   while(n1!=0)
+    {
+       t1[]= n1%10;
+       t2[]= n2%10;
+       n1=n1/10;
+       n2=n2/10;
+    }
+   int sum=0;
+   for(int i=0; i<n; i++)
+    {
+        sum =  sum + (t2[i] - t1[i]);
+    }
+    int res= abs(sum);
+    cout" The digit distance between two integers is:" << res;
+ }

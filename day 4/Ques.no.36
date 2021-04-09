@@ -1,0 +1,14 @@
+#include <iostream.h>
+using namespace std;
+void main()
+ {
+     int n, ways;
+     cout<<"enter the no. of steps:";
+     cin>> n;
+     if(n<=1)
+      {
+         cout<<n;
+      }
+     ways = (n-1) + (n-2);
+     cout<<"no. of ways = " << ways;
+ }

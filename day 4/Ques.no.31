@@ -1,0 +1,30 @@
+#include<iostream.h>
+using namespace std;
+void main()
+ {
+   int r, c, i, j;
+   cout<<"enter no of rows:";
+   cin>> r;
+   cout<<"enter no of column:";
+   cin>>c;
+   double arr[r][c];
+   for(i=0; i<r; i++)
+    {
+       for(j=0; j<c; j++)
+        { 
+           cin>> arr[i][j];
+        }
+    }
+   double largestNumber = [0,0,0,0];
+     for(i = 0; i <r; i++) 
+      {
+         for(j = 0; j < c; j++) 
+          {
+             if(arr[i][j] > largestNumber[i])  
+              {         
+                 largestNumber[i] = arr[i][j];
+              }
+          }
+      }
+   cout<<"largest number:" <<largestNumber;
+ }

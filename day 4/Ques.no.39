@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+   int n;
+   cout<<"enter the size of array:"
+   cin>> n;
+   int a[n];
+   cout<<"enter the value of array:";
+   for(int i=0; i<n; i++)
+    {
+        cin>>a[i];
+    }
+   int max_sum = a[0], temp  = a[0];
+   for(int i=1; i<n; i++)
+    { 
+       temp = max(a[i], temp + a[i]);
+       max_sum = max(max_sum, temp);
+    }
+   cout << "Maximum contiguous sum is: " << max_sum;
+   return 0;
+}

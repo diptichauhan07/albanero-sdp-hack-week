@@ -1,0 +1,23 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main() {
+    int n ;
+    cout << "Please enter no.of step in staircase: \ n";
+    cin >> n;
+    int cost[n];
+    cout << "enter cost of each step: ";
+    for (int i = 0; i < n; i++) 
+     {
+        cin >> cost[i];
+     }
+    int c0 = 0, c1=0, c=0 ;
+    for (int i = 2; i <= n; i++) 
+     {
+        c = min(c0 + cost[i - 2], c1 + cost[i -1]);
+        c0 = c1;
+        c1 = c;
+     }
+    cout << "minimum cost is:"<< c ;
+    return 0;
+}

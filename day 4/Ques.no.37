@@ -16,6 +16,12 @@ void main()
           s=r+s;
           n=n/2;
        }
-      
+      int count=0;
+      for(int i=0; i<s.lenght(); i++)
+       {
+          if(s.at(i)=='1')
+           count++
+       }
    }
+  cout<<"no. of 1's:" << count;
  }
